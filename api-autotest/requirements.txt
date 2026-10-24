@@ -1,0 +1,5 @@
+# Interface automation project dependencies
+pytest
+requests
+PyYAML
+flask
