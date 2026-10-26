@@ -68,5 +68,15 @@ def delete_user(user_id):
     return jsonify({"error": "user not found"}), 404
 
 
+@app.post("/reset")
+def reset_users():
+    global users
+    users = [
+        {"id": 1, "name": "Tom", "age": 20},
+        {"id": 2, "name": "Jerry", "age": 16},
+    ]
+    return jsonify({"status": "reset"})
+
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)

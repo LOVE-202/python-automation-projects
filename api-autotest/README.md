@@ -20,4 +20,5 @@
 - 第 2 章 pytest 入门完成（测试发现、assert 断言、运行多个文件、按名称筛选）
 - 第 3 章 requests 接口调用完成（GET、GET 带参数、POST、PUT、DELETE、状态码、json 解析和断言）
 - 第 4 章 pytest 与 requests 结合完成（把请求脚本升级为正式测试用例，使用 pytest 自动断言）
+- 第 5 章 fixture 与测试数据隔离完成（conftest、autouse、reset 接口、可重复执行的增删改用例）
 
