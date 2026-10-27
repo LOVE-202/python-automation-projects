@@ -22,4 +22,5 @@
 - 第 4 章 pytest 与 requests 结合完成（把请求脚本升级为正式测试用例，使用 pytest 自动断言）
 - 第 5 章 fixture 与测试数据隔离完成（conftest、autouse、reset 接口、可重复执行的增删改用例）
 - 第 6 章 pytest 参数化完成（parametrize、一个测试函数跑多组数据、接口参数化测试）
+- 第 7 章 数据驱动完成（yaml 测试数据、safe_load 读取、数据与代码解耦、Path 定位文件）
 

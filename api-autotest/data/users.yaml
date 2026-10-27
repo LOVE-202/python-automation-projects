@@ -1,0 +1,5 @@
+# 这是一个 yaml 文件，- 表示列表里的一项，每一项是一个字典
+- user_id: 1
+  expected_name: Tom
+- user_id: 2
+  expected_name: Jerry
