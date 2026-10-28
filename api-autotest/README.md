@@ -23,4 +23,5 @@
 - 第 5 章 fixture 与测试数据隔离完成（conftest、autouse、reset 接口、可重复执行的增删改用例）
 - 第 6 章 pytest 参数化完成（parametrize、一个测试函数跑多组数据、接口参数化测试）
 - 第 7 章 数据驱动完成（yaml 测试数据、safe_load 读取、数据与代码解耦、Path 定位文件）
+- 第 8 章 token 登录与接口关联完成（login 拿 token、headers 传 Authorization、401 异常场景）
 

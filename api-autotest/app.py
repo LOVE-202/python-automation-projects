@@ -78,5 +78,31 @@ def reset_users():
     return jsonify({"status": "reset"})
 
 
+# 正确的账号和密码，以及登录后返回的 token
+VALID_USERNAME = "admin"
+VALID_PASSWORD = "123456"
+TOKEN = "abc123"
+
+
+@app.post("/login")
+def login():
+    data = request.get_json()
+    # 账号密码正确才返回 token
+    if data.get("username") == VALID_USERNAME and data.get("password") == VALID_PASSWORD:
+        return jsonify({"token": TOKEN})
+    # 否则返回 401，表示未授权
+    return jsonify({"error": "invalid credentials"}), 401
+
+
+@app.get("/profile")
+def profile():
+    # 从请求头里拿 Authorization，也就是 token
+    token = request.headers.get("Authorization")
+    # token 不对就拒绝访问
+    if token != TOKEN:
+        return jsonify({"error": "unauthorized"}), 401
+    return jsonify({"username": "admin", "email": "admin@example.com"})
+
+
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
