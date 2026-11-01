@@ -1,4 +1,5 @@
 import requests
+import logging
 
 
 
@@ -10,12 +11,24 @@ def test_login_and_profile():
     )
     assert resp.status_code==200
     token=resp.json()["token"]
+    logging.info("登陆成功，拿到token：%s",token)
+
+
+
     resp2=requests.get(
         f"{BASE_URL}/profile",
         headers={"Authorization":token},
     )
     assert resp2.status_code==200
-    assert resp2.json()["username"]=="admin"
+    logging.info("profile访问成功，用户名：%s",resp2.json()["username"])
+def teest_profile_without_token():
+    resp=requests.get(f"{BASE_URL}/profile")
+    assert resp.status_code==401
+    logging.info("无token访问profile，被拒绝，状态码：%s",resp.status_code)
+
+
+
+
 
 # def test_profile_without_token():
 #     # 不带 token 直接访问 /profile

@@ -24,4 +24,5 @@
 - 第 6 章 pytest 参数化完成（parametrize、一个测试函数跑多组数据、接口参数化测试）
 - 第 7 章 数据驱动完成（yaml 测试数据、safe_load 读取、数据与代码解耦、Path 定位文件）
 - 第 8 章 token 登录与接口关联完成（login 拿 token、headers 传 Authorization、401 异常场景）
+- 第 9 章 日志 logging 完成（日志级别、占位符、在测试中记录步骤、log-cli-level 显示）
 

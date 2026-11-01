@@ -1,5 +1,12 @@
 import pytest
 import requests
+import logging
+
+# 配置日志：最低显示 INFO 级别，并带上时间和级别
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
 
 # 测试端统一使用的服务地址
 BASE_URL = "http://127.0.0.1:5000"

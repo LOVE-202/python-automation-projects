@@ -10,7 +10,3 @@ def test_num(a,b,expected):
     assert a*b==expected
 
 
-@pytest.mark.parametrize("x,y",[
-        (1, 2),
-        (3, 4),]
-)
