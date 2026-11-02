@@ -23,7 +23,11 @@ BASE_URL = "http://127.0.0.1:5000"
 @pytest.fixture(autouse=True)
 def reset_data():
     # 每个测试开始前，调用 /reset 接口，把服务端数据恢复成初始状态
-    requests.post(f"{BASE_URL}/reset")
+    try:
+        requests.post(f"{BASE_URL}/reset")
+    except requests.exceptions.ConnectionError:
+        # 服务没启动时跳过重置，让纯本地练习（fixture、parametrize）也能运行
+        pass
     # yield 之前是“测试前做的事”；这里没有“测试后要做的事”，直接结束
     yield
 
