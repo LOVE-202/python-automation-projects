@@ -27,4 +27,5 @@
 - 第 9 章 日志 logging 完成（日志级别、占位符、在测试中记录步骤、log-cli-level 显示）
 - 第 10 章 测试报告完成（pytest-html 生成 HTML 报告、报告为生成物不提交 Git）
 - 第 11 章 请求封装与配置管理完成（config 统一地址、ApiClient 封装请求、client fixture）
+- 第 12 章 环境切换完成（ENVIRONMENTS 多环境字典、CURRENT_ENV 开关切换）
 
